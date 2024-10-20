@@ -1,0 +1,94 @@
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Set the background */
+.background {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* Notification Panel Styling */
+.notification-panel {
+    position: absolute;
+    top: -100px; /* Initially hidden above the screen */
+    left: 20px;
+    width: 300px;
+    height: 70px;
+    background-color: rgba(137, 228, 236, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    animation: slideDown 2s ease forwards;
+}
+
+/* Drop-down animation for the notification panel */
+@keyframes slideDown {
+    0% {
+        top: -100px; /* Start off-screen */
+    }
+    100% {
+        top: 20px; /* Slide down to visible position */
+    }
+}
+
+/* Cat Icon Styling */
+.cat-icon {
+    width: 75px;
+    height: 90px;
+}
+
+/* Cat running animation */
+.animated-cat {
+    position: absolute;
+    bottom: -1px;
+    left: -100px;
+    animation: runToPanel 4s linear forwards;
+}
+
+@keyframes runToPanel {
+    0% {
+        left: -100px; /* Cat starts off the screen */
+        transform: scale(1);
+    }
+    70% {
+        left: 250px; /* Cat reaches near the panel */
+        transform: scale(1.1); /* Slight scale up as cat approaches */
+    }
+    100% {
+        left: 3px; /* Cat stops near the panel */
+        transform: scale(1);
+    }
+}
+
+/* Notification Text */
+.notification-text {
+    flex-grow: 1;
+    margin-left: 60px; /* Space for the cat */
+    color: white;
+}
+
+.notification-text p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.timestamp {
+    font-size: 14px;
+    color: black;
+    font: bold;
+}

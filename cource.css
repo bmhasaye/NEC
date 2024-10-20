@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('cloud\ pic.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+
+.container {
+    width: 100%;
+    
+    margin: 0 auto; 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navbar {
+    background-color: #add8e6;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.menu-icon {
+    position: absolute;
+    left: 15px;
+    font-size: 24px;
+}
+
+.navbar h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #333;
+}
+
+.unlock-section {
+    background-color: #a6e3ff;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.course {
+    margin-bottom: 15px;
+}
+.course h1 {
+    font-family: 'Montserrat', sans-serif; /* or any other font you prefer */
+    font-size: 24px;
+    color: #333;
+}
+.course img {
+    width: 100%;
+    height:auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px;
+}
+

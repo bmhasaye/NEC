@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            background: url('cloud\ pic.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .header {
+            background-color: #87CEEB;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #004d99;
+        }
+
+        .title {
+            font-size: 30px;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .menu-btn, .search-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Events Section */
+        .events-container {
+            padding: 10px;
+            gap: 40px; /* Space between the images */
+            justify-items: center; 
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            padding: 30px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .event {
+            position: relative;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .event img {
+            width: 100%;
+            border-radius: 10px;
+            max-width: 30%;
+            object-fit: cover;
+        }
+
+        .text {
+            position:relative;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 18px;
+            padding: 0;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item {
+            text-align: center;
+            color: #00cccc;
+        }
+
+        .icon {
+            font-size: 24px;
+        }
+
+        .label {
+            display: block;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="menu-btn">&#9776;</button>
+        <h1 class="title">𝓔𝓥𝓔𝓝𝓣𝓢</h1>
+        <button class="search-btn">&#128269;</button>
+    </div>
+
+    <div class="events-container">
+        <div class="event">
+            <img src="download (12).jpeg" alt="Event 1">
+            <div class="text">Event 1</div>
+        </div>
+        <div class="event">
+            <img src="download (13).jpeg" alt="Event 2">
+            <div class="text">Event 2</div>
+        </div>
+        <div class="event">
+            <img src="download (14).jpeg" alt="Event 3">
+            <div class="text">Event 3</div>
+        </div>
+        <div class="event">
+            <img src="download (15).jpeg" alt="Event 4">
+            <div class="text">Event 4</div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item" id="nav-drop">
+            <span class="icon">💧</span>
+            <span class="label">Drop</span>
+        </div>
+        <div class="nav-item" id="nav-course">
+            <span class="icon">📘</span>
+            <span class="label">Course</span>
+        </div>
+        <div class="nav-item" id="nav-events">
+            <span class="icon">🎉</span>
+            <span class="label">Events</span>
+        </div>
+        <div class="nav-item" id="nav-search">
+            <span class="icon">🔍</span>
+            <span class="label">Search</span>
+        </div>
+    </div>
+
+    <script>
+        // Toggle menu function
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            alert('Menu button clicked! This can toggle a menu in a real scenario.');
+        });
+
+        // Search button function
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            let searchQuery = prompt('Enter your search query:');
+            if (searchQuery) {
+                alert(`You searched for: ${searchQuery}`);
+            }
+        });
+
+        // Bottom navigation click events
+        document.getElementById('nav-drop').addEventListener('click', function() {
+            alert('Navigating to Drop section!');
+        });
+
+        document.getElementById('nav-course').addEventListener('click', function() {
+            alert('Navigating to Course section!');
+        });
+
+        document.getElementById('nav-events').addEventListener('click', function() {
+            alert('You are already on the Events section!');
+        });
+
+        document.getElementById('nav-search').addEventListener('click', function() {
+            alert('Navigating to Search section!');
+        });
+    </script>
+</body>
+</html>

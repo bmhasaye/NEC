@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Most Favourite</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    background: url('cloud\ pic.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.header {
+    background-color: #155fcf;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    padding: 30px;
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.nav-item {
+    text-align: center;
+    color: #00cccc;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+    </style>
+    
+</head>
+<body>
+    <!-- Header with Title -->
+    <div class="header">
+        <h1>Today's Most Favourite</h1>
+    </div>
+
+    <!-- Image Grid Section -->
+    <div class="image-grid">
+        <div class="grid-item">
+            <img src="images (3).jpeg" alt="Favourite 1">
+        </div>
+        <div class="grid-item">
+            <img src="download (13).jpeg" alt="Favourite 2">
+        </div>
+        <div class="grid-item">
+            <img src="images (6).jpeg" alt="Favourite 3">
+        </div>
+        <div class="grid-item">
+            <img src="images (7).jpeg" alt="Favourite 4">
+        </div>
+        <div class="grid-item">
+            <img src="download (2).jpeg" alt="Favourite 5">
+        </div>
+        <div class="grid-item">
+            <img src="download (3).jpeg" alt="Favourite 6">
+        </div>

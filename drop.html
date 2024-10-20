@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Drop Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87CEEB; /* Sky blue background */
+            overflow: hidden;
+        }
+
+        .water-drop {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: #00BFFF; /* Water drop color */
+            border-radius: 50%;
+            animation: fall 2s infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -50px;
+                transform: scale(0.2);
+                opacity: 0.8;
+            }
+            60% {
+                top: 200px;
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                top: 500px;
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .ripple {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background-color: rgba(0, 191, 255, 0.5);
+            animation: ripple-effect 2s infinite;
+        }
+
+        @keyframes ripple-effect {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+            60% {
+                width: 60px;
+                height: 60px;
+                opacity: 0.2;
+            }
+            100% {
+                width: 80px;
+                height: 80px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="water-drop">
+        <div class="ripple"></div>
+    </div>
+</body>
+</html>
+

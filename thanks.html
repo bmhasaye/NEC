@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Sharing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('cloud\ pic.jpg') no-repeat center center fixed;
+            background-size: cover;
+            
+            font-family: Arial, sans-serif;
+        }
+        
+        .navbar {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .icon {
+            width: 100px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .icon img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .icon-label {
+            text-align: center;
+            font-size: 19px;
+            color: white;
+            gap:130%;
+        }
+
+        .thanks-message {
+            margin-top: 30px;
+            font-size: 30px;
+            color: #201e19;
+        }
+
+        .clouds-logo {
+            margin-top: 70px;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            background: url('clouds-logo.png') no-repeat center center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Icon -->
+    <div class="navbar">
+        &#9776;
+    </div>
+
+    <!-- Social Icons Section -->
+    <div class="icons">
+        <div class="icon">
+            <img src="wp n images (8).jpeg" alt="WhatsApp">
+        </div>
+        <div class="icon">
+            <img src="insta images (8).jpeg" alt="Instagram">
+        </div>
+        <div class="icon">
+            <img src="l images (8).jpeg" alt="LinkedIn">
+        </div>
+        <div class="icon">
+            <img src="images (8).jpeg" alt="Twitter">
+        </div>
+    </div>
+
+    <!-- Social Labels -->
+    <div class="icons">
+        <div class="icon-label">WhatsApp</div>
+        <div class="icon-label">Instagram</div>
+        <div class="icon-label">LinkedIn</div>
+        <div class="icon-label">Twitter</div>
+    </div>
+
+    <!-- Thanks Message -->
+    <div class="thanks-message">
+        Thanks You For Sharing!
+    </div>
+    <div class="icons">
+        <div class="icon">
+            <img src="logo.ht.jpg" alt="clouds">
+        </div>
+
+    <!-- Clouds Logo -->
+    <div class="clouds-logo">
+        <!-- Placeholder for the cloud logo image -->
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Page</title><style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+.container {
+    width: 300px;
+    background-color: #0babf5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #111011;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.tier {
+    background-color: #d9e6eb;
+    margin-bottom: 15px;
+    padding: 20px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tier h2 {
+    font-size: 18px;
+    margin: 0;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background-color: #060f0f;
+  background-image: url("cloud10.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.background-clip{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        @media (max-aspect-ratio:75/9.9){
+            .background-clip{
+                width: auto;
+                height: 100%;
+            }
+        }
+
+
+/* Header Section */
+.header {
+    background-color: #2f529e;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #5cabfa;
+}
+
+.title {
+    font-size: 24px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.menu-btn, .search-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Events Section */
+.events-container {
+    padding: 10px;
+}
+
+.event {
+    margin-bottom: 10px;
+}
+
+.event img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #052283;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    text-align: center;
+    color: #0c0c0c;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+    </style>
+    <link rel="stylesheet" href="drop.css">
+</head>
+
+<body>
+   
+    <div class="header">
+        <button class="menu-btn">&#9776;</button>
+        <h1 class="title">DROP HISTORY</h1>
+        <button class="search-btn">&#128269;</button>
+    </div>
+
+    <div class="Drop-container">
+        <video autoplay loop muted plays-inline class="background-clip"></video>
+            <source src="./cloudvideo2.mp4"type="video/mp4">
+        </video>
+        <div class="Drop">
+            <h2 class="name">Name:</h2>
+            <input type="text" id="name" name="name" required><br><br>
+        </div>
+        <div class="Drop">
+            <h3 class="Date">Date:</h3>
+            <input type="text" id="Date" name="Date" required><br><br>
+        </div>
+        <div class="Drop">
+            <H4 class="Mode">Mode:</H4> 
+            <input type="text" id="Mode" name="Mode" required><br><br>
+        </div>
+        <div class="Drop"></div>
+            <H4 class="Time">Time:</H4>
+            <input type="text" id="Time" name="Time" required><br><br>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <span class="icon">💧</span>
+            <span class="label">Drop</span>
+        </div>
+        <div class="nav-item">
+            <span class="icon">📘</span>
+            <span class="label">Course</span>
+        </div>
+        <div class="nav-item">
+            <span class="icon">🎉</span>
+            <span class="label">Events</span>
+        </div>
+        <div class="nav-item">
+            <span class="icon">🔍</span>
+            <span class="label">Search</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouds - Where we Elevate Our Imaginations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <header>
+        <nav class="navbar">
+            <img src="droplet.png" alt="Droplet" class="droplet-logo">
+            <h1>CLOUDS</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mem3.html">Membership</a></li>
+                <li><a href="earn.html">Drops Balance</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="refer.html">Refer & Earn</a></li>
+            </ul>
+
+            <!-- Dropdown button -->
+            <div class="dropdown">
+                <button class="dropbtn">☰ Menu</button>
+                <div class="dropdown-content">
+                    <div class="grid-container">
+                        <!-- Grid Item 1 -->
+                        <div class="grid-item">
+                            <img src="course.jpeg" alt="Courses">
+                            <p>Courses</p>
+                        </div>
+
+                        <!-- Grid Item 2 -->
+                        <div class="grid-item">
+                            <img src="acadmic.jpeg" alt="Academics">
+                            <p>Academics</p>
+                        </div>
+
+                        <!-- Grid Item 3 -->
+                        <div class="grid-item">
+                            <img src="download (3).jpeg" alt="Today's Posts">
+                            <p>Today's Posts</p>
+                        </div>
+
+                        <!-- Grid Item 4 -->
+                        <div class="grid-item">
+                            <img src="cloud pic.jpg" alt="Clouds">
+                            <p>Clouds</p>
+                        </div>
+
+                        <!-- Grid Item 5 -->
+                        <div class="grid-item">
+                            <img src="download (10).jpeg" alt="Competition">
+                            <p>Competition</p>
+                        </div>
+
+                        <!-- Grid Item 6 -->
+                        <div class="grid-item">
+                            <img src="sport.jpeg" alt="Sport & Activities">
+                            <p>Sport & Activities</p>
+                        </div>
+
+                        <!-- Grid Item 7 -->
+                        <div class="grid-item">
+                            <img src="college.jpeg" alt="College Days">
+                            <p>College Days</p>
+                        </div>
+
+                        <!-- Grid Item 8 -->
+                        <div class="grid-item">
+                            <img src="wings.jpeg" alt="Wings">
+                            <p>Wings</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Post Section -->
+    <section class="post-section">
+        <% posts.forEach(post => { %>
+        <div class="post-card">
+            <div class="post-header">
+                <img src="pfp.png" alt="Profile" class="profile-pic">
+                <div class="user-info">
+                    <p class="username"><%= post.username %></p>
+                    <p class="post-time"><%= post.timeAgo %></p>
+                </div>
+            </div>
+            <div class="post-image">
+                <img src="post.jpg" alt="Post Content">
+            </div>
+            <div class="post-actions">
+                <button class="action-btn"><img src="likes.png" alt="Like"></button>
+                <button class="action-btn"><img src="comment.png" alt="Comment"></button>
+                <button class="action-btn"><img src="share.png" alt="Share"></button>
+            </div>
+            <div class="post-caption">
+                <strong><%= post.username %></strong> <%= post.caption %>
+            </div>
+            <div class="comments">
+                <% post.comments.forEach(comment => { %>
+                <p><strong><%= comment.user %></strong> <%= comment.text %></p>
+                <% }); %>
+            </div>
+            <form class="comment-form" action="/add-comment/<%= post.id %>" method="POST">
+                <input type="text" name="comment" placeholder="Add a comment...">
+                <button type="submit">Post</button>
+            </form>
+        </div>
+        <% }); %>
+    </section>
+
+<!-- Add Post Button at Bottom-Left -->
+<button class="add-post-btn" id="openModalBtn">+</button>
+
+<!-- Add Post Modal -->
+<div class="add-post-modal" id="addPostModal">
+    <div class="add-post-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Add a New Post</h2>
+        <form class="add-post-form" action="/add-post" method="POST">
+            <textarea name="caption" placeholder="Write your post here..." rows="4"></textarea>
+            <button type="submit">Post</button>
+        </form>
+        <header>
+            <div class="logo">Clouds</div>
+            
+        </header>
+    </div>
+</div>
+        
+    <script src="scripts.js"></script>
+</body>
+</html>

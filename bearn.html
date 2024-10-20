@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reward Drops</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 300px;
+    height: 600px;
+    background-image: url(do.jpeg); /* Replace with actual image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reward-box {
+    text-align: center;
+    color: yellow;
+}
+
+.reward-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.show-count {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-count input {
+    margin-right: 10px;
+}
+
+.show-count label {
+    font-size: 16px;
+    color: white;
+}
+
+.drop-icon {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.show-drops-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ffe600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.show-drops-btn:hover {
+    background-color: #ffcc00;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="reward-box">
+            <p class="reward-text">+5 Drops<br>Reward Earned</p>
+            <div class="show-count">
+                <input type="checkbox" id="show-drop-count">
+                <label for="show-drop-count">Show drop count</label>
+                <span class="drop-icon">💧</span>
+            </div>
+            <button id="show-drops" class="show-drops-btn">Show Drops</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("show-drops").addEventListener("click", function() {
+    alert("You earned 5 drops!");
+});
+
+    </script>
+</body>
+</html>

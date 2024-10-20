@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cloud</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #87CEEB;
+            margin: 0;
+            padding: 0;
+            }
+            
+           
+            .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+                
+            .background-clip{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .login-box {
+           
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+            
+        }
+
+        .login-box h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .login-box input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+       
+
+        .login-box button {
+            background-color: #1E90FF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+
+        .login-box button:hover {
+            background-color: #4682B4;
+        }
+
+        .change-password {
+            display: block;
+            margin-top: 10px;
+            color: #060a0e;
+            text-decoration: none;
+        }
+        .change-password:hover {
+            text-decoration: underline;
+        }
+        .signup-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #1E90FF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .signup-button:hover {
+            background-color: #4682B4;
+        }
+    
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="./cloudvideo1.mp4"type="video/mp4">
+        </video>
+        
+        <a href="signup.html" class="signup-button">Sign Up</a>
+          
+        <div class="login-box"> 
+            <h2>LOGIN</h2>
+            <form>
+                <label for="username">Username (student ID)</label>
+                <input type="text" id="username" name="username" placeholder="Enter Username" required>
+
+                <label for="password">Password (PRN No. provide by college)</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+              
+              <button type="submit"  href="index.html" id="login-btn">Login </button>
+                <a href="op.html" class="change">change Password?</a>
+                <li><a href="index.html"></a></li>
+
+                
+            </form>
+        </div>
+        
+    </div>
+    <script>
+        // Get the login form elements
+const loginForm = document.querySelector('form');
+const usernameInput = document.querySelector('#username');
+const passwordInput = document.querySelector('#password');
+const loginButton = document.querySelector('#login-btn');
+
+// Function to validate login credentials
+function validateLogin(username, password) {
+    // For demonstration purposes, assume the username and password are correct
+    // In a real-world scenario, you would validate the credentials against a database or API
+    if (username === 'admin' && password === 'password') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Add event listener to login button
+loginButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    // Validate login credentials
+    if (validateLogin(username, password)) {
+        // Login successful, redirect to home page
+        window.location.href = 'index.html';
+    } else {
+        alert('Invalid username or password!');
+    }
+});
+    </script>
+</body>
+</html>
+
+

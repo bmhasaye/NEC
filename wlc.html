@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clouds - Dynamic Background Animation</title>
+  <style>body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  #background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(120deg, #FFDDC1, #FF7E5F); /* Default gradient for morning */
+    animation: gradientAnimation 5s linear infinite; /* Smooth gradient animation */
+  }
+  
+  /* Default gradient colors for each time period */
+  #background.morning {
+    background: linear-gradient(120deg, #FFDDC1, #FF7E5F); /* Light to dark for morning */
+  }
+  
+  #background.afternoon {
+    background: linear-gradient(120deg, #87CEEB, #4682B4); /* Light to dark for afternoon */
+  }
+  
+  #background.evening {
+    background: linear-gradient(120deg, #FFD700, #FF4500); /* Light to dark for evening */
+  }
+  
+  #background.night {
+    background: linear-gradient(120deg, #2c3e50, #000000); /* Light to dark for night */
+  }
+  
+  /* Animation keyframes for the gradient movement */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%; /* Start position */
+    }
+    100% {
+      background-position: 0% 100%; /* End position */
+    }
+  }
+  </style>
+</head>
+<body>
+  <div id="background">
+    <h1>Welcome to Clouds</h1>
+    <p>Your background adjusts with time</p>
+  </div>
+
+  <script>window.onload = function() {
+    let background = document.getElementById('background');
+
+    // Function to calculate background color based on time of day
+    function getBackgroundClass(hour) {
+        if (hour >= 6 && hour < 12) {
+            return 'morning';  // Morning: 6am to 12pm
+        } else if (hour >= 12 && hour < 18) {
+            return 'afternoon';  // Afternoon: 12pm to 6pm
+        } else if (hour >= 18 && hour < 20) {
+            return 'evening';  // Evening: 6pm to 8pm
+        } else {
+            return 'night';  // Night: 8pm to 6am
+        }
+    }
+
+    // Function to smoothly apply the background class and start the animation
+    function changeBackground() {
+        let currentHour = new Date().getHours();
+        let currentClass = getBackgroundClass(currentHour);
+
+        // Apply the time-based background gradient
+        background.className = currentClass;
+
+        // Reapply animation for smooth transition
+        background.style.animation = 'none';  // Reset the animation
+        setTimeout(() => {
+            background.style.animation = 'gradientAnimation 5s linear infinite';  // Restart animation
+        }, 10);
+    }
+
+    // Start the initial background change
+    changeBackground();
+
+    // Optionally, check and update background every hour
+    setInterval(changeBackground, 1000 * 60 * 60); // Update every hour
+};
+</script>
+</body>
+</html>
